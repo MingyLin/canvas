@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Objects/Person.js"></script>
+    <script src="Objects/Student.js"></script>
+    <script src="Objects/Circle.js"></script>
+    <script src="Objects/Polygon.js"></script>
+    
+    <style type="text/css">
+        canvas {
+            border: 0.5px solid black;
+            width: 800px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+        
+        var ballCenter = { X: 50, Y: 50 },
+            radius = 10;
+        
+        var ball = new Circle(ctx, ballCenter, radius);
+        ball.Show();
+        
+
+        var tri = new Polygon(ctx, { X: 100, Y: 100 }, 15, 3);
+        tri.Rotate();
+        tri.Show();
+
+
+
+
+    </script>
+</body>
+</html>
